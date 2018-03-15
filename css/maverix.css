@@ -936,6 +936,12 @@ p{
     display:inline-block;
     padding:5px 9px
 }
+
+.sidebar div.sidebar-navicontainer .sidebar-headlogo{
+	padding:20px 10px;
+	margin-left: 70px
+}
+
 .sidebar div.sidebar-headbox .sidebar-toggle{
     opacity:0;
     cursor:pointer;
@@ -1044,10 +1050,10 @@ div.heading-bar{
     right:0;
     z-index:2;
     min-width:680px;
-    background-image:-o-linear-gradient(-89deg, #efeef1 0, #d5d9dc 100%);
-    background-image:-moz-linear-gradient(-89deg, #efeef1 0, #d5d9dc 100%);
-    background-image:-ms-linear-gradient(-89deg, #efeef1 0, #d5d9dc 100%);
-    background-image:linear-gradient(-179deg, #efeef1 0, #d5d9dc 100%);
+    background-image:-o-linear-gradient(-89deg, #3C3CDC 0, #000611 100%);    /* from efeef1 to 3C3CD , from 020c1c to 000611*/
+    background-image:-moz-linear-gradient(-89deg, #3C3CDC 0, #000611 100%);		/* from efeef1 to 3C3CD , from 020c1c to 000611*/
+    background-image:-ms-linear-gradient(-89deg, #3C3CDC 0, #000611 100%);		/* from efeef1 to 3C3CD , from 020c1c to 000611*/
+    background-image:linear-gradient(-179deg, #3C3CDC 0, #000611 100%);			/* from efeef1 to 3C3CD , from 020c1c to 000611*/
     border-bottom:1px solid #c2c2c2;
     height:88px;
     padding:20px
@@ -1065,7 +1071,7 @@ div.heading-bar .heading-one{
     font-family:Helvetica Neue,Helvetica,Arial;
     font-weight:bold;
     font-size:24px;
-    color:#3a3d40;
+    color:#ffffff; /* from 3a3d40 to ffffff */
     line-height:29px;
     letter-spacing:-1px;
     text-shadow:0 1px 0 rgba(255,255,255,0.46) !important

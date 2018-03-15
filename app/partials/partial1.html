@@ -1,8 +1,14 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="sub-nav">
     <ul>
-        <li ng-class="{selected : $parent.subNav1 === 0}"><a href="" ng-click="$parent.subNav1 = 0">Overview</a></li>
-        <!-- <li ng-class="{selected : $parent.subNav1 === 1}"><a href="" ng-click="$parent.subNav1 = 1">Environment</a></li> -->
-        <!-- <li ng-class="{selected : $parent.subNav1 === 2}"><a href="" ng-click="$parent.subNav1 = 2">Memory</a></li> -->
+        <li ng-class="{selected : $parent.subNav1 === 0}"><a href="" ng-click="$parent.subNav1 = 0">Applications</a></li>
+         <li ng-class="{selected : $parent.subNav1 === 1}"><a href="" ng-click="$parent.subNav1 = 1">Environment</a></li>
+        <li ng-class="{selected : $parent.subNav1 === 2}"><a href="" ng-click="$parent.subNav1 = 2">Cluster Selection</a></li>
+		<li ng-class="{selected : $parent.subNav1 === 3}"><a href="" ng-click="$parent.subNav1 = 3">Select V/Ms</a></li>
+		<li ng-class="{selected : $parent.subNav1 === 4}"><a href="" ng-click="$parent.subNav1 = 4">Application Validations</a></li>
+		<li ng-class="{selected : $parent.subNav1 === 5}"><a href="" ng-click="$parent.subNav1 = 5">Create APP</a></li>
     </ul>
 </div>
 
@@ -26,7 +32,7 @@
 				
 				<!-- for add application button -->
 				<div class="toolbar">
-				<div style="float: left"><a class="toolbar-button" href="" ng-click="$parent.subNav1 = 1"><span class="entypo-plus"></span></a>		
+				<div style="float: left"><a class="toolbar-button" href="" ng-click="$parent.subNav1 = 1"><span class="entypo-plus"></span></a></div>
             </tr>
 			<br/>
             <tr>
@@ -98,131 +104,352 @@
 					</div>
 
     </div>
+	
 
 
     <div ng-show="$parent.subNav1 === 1">
+	<div style="float: left"><a class="" href="" ng-click="$parent.subNav1 = 1"></a>		</div>
         <h2>Environment</h2>
+		<br/>
+        <!-- <ul class="list-unstyled indent"> -->
+            <!-- <li> -->
+                <!-- <input type="checkbox"> Allow Remote Access via SSH for -->
+                <!-- <select> -->
+                    <!-- <option>Administrators</option> -->
+                    <!-- <option>All Users</option> -->
+                <!-- </select> -->
+            <!-- </li> -->
+            <!-- <li> -->
+                <!-- <input type="checkbox"> Activate Screen Sharing and Remote Access -->
+            <!-- </li> -->
+            <!-- <li> -->
+                <!-- <input type="checkbox"> Allow Remote Administration through Server -->
+            <!-- </li> -->
+            <!-- <li> -->
+                <!-- <input type="checkbox"> Allow Push Notifications -->
+            <!-- </li> -->
+        <!-- </ul> -->
+				
+				
+				<div class="row">
+			<div class="col-md-12">
+				<form role="form">
+					
+					<div class="form-group">
+						<label for="sourceVc">Source VC:</label>
+						<input type="source" class="form-control" id="sourceVc" placeholder="Source VC">
+					</div>
+					<div class="form-group">
+						<label for="TargetVc">Target VC:*</label>
+						<input type="target" class="form-control" id="targetVc" placeholder="Target VC">
+					</div>
+					<div class="form-group">			
+							<label for="Platform">Platform:</label>
+							<select>
+								<option>Example</option>
+								<option>Example</option>
+							</select>
+					</div>
+					<div class="form-group">
+						<label for="source">Source:</label>
+						<input type="source" class="form-control" id="source" placeholder="Source">
+					</div>
+					<div class="form-group">
+						<label for="target">Target:*</label>
+						<input type="target" class="form-control" id="target" placeholder="Target">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Username:*</label>
+						<input type="user" class="form-control" id="user" placeholder="Enter Username">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password:*</label>
+						<input type="user" class="form-control" id="password" placeholder="Password">
+					</div>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<!-- added back button  -->
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 2">Connect</a>
+    </div>
 
-        <ul class="list-unstyled indent">
-            <li>
-                <input type="checkbox"> Allow Remote Access via SSH for
-                <select>
-                    <option>Administrators</option>
-                    <option>All Users</option>
-                </select>
-            </li>
-            <li>
-                <input type="checkbox"> Activate Screen Sharing and Remote Access
-            </li>
-            <li>
-                <input type="checkbox"> Allow Remote Administration through Server
-            </li>
-            <li>
-                <input type="checkbox"> Allow Push Notifications
-            </li>
-        </ul>
+    <!-- <div ng-show="$parent.subNav1 === 2"> -->
+        <!-- <div class="row"> -->
+            <!-- <div class="col-md-12"> -->
+                <!-- <h2>Memory Usage</h2> -->
+                <!-- <div class="demo-container"> -->
+                    <!-- <div id="placeholder" class="demo-placeholder" style="width: 600px; height: 300px;"></div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <script> -->
+
+
+
+
+                <!-- // We use an inline data source in the example, usually data would -->
+                <!-- // be fetched from a server -->
+
+                <!-- var data = [], -->
+                        <!-- totalPoints = 300; -->
+
+                <!-- function getRandomData() { -->
+
+                    <!-- if (data.length > 0) -->
+                        <!-- data = data.slice(1); -->
+
+                    <!-- // Do a random walk -->
+
+                    <!-- while (data.length < totalPoints) { -->
+
+                        <!-- var prev = data.length > 0 ? data[data.length - 1] : 50, -->
+                                <!-- y = prev + Math.random() * 10 - 5; -->
+
+                        <!-- if (y < 0) { -->
+                            <!-- y = 0; -->
+                        <!-- } else if (y > 100) { -->
+                            <!-- y = 100; -->
+                        <!-- } -->
+
+                        <!-- data.push(y); -->
+                    <!-- } -->
+
+                    <!-- // Zip the generated y values with the x values -->
+
+                    <!-- var res = []; -->
+                    <!-- for (var i = 0; i < data.length; ++i) { -->
+                        <!-- res.push([i, data[i]]) -->
+                    <!-- } -->
+
+                    <!-- return res; -->
+                <!-- } -->
+
+                <!-- // Set up the control widget -->
+
+                <!-- var updateInterval = 24; -->
+
+                <!-- var plot = $.plot("#placeholder", [ getRandomData() ], { -->
+                    <!-- series: { -->
+                        <!-- shadowSize: 0,	// Drawing is faster without shadows -->
+                        <!-- color: "#77B1DE" -->
+                    <!-- }, -->
+                    <!-- yaxis: { -->
+                        <!-- min: 0, -->
+                        <!-- max: 100 -->
+                    <!-- }, -->
+                    <!-- xaxis: { -->
+                        <!-- show: false -->
+                    <!-- }, -->
+                    <!-- grid: { -->
+                        <!-- backgroundColor: "#F5F5F5", -->
+                        <!-- borderWidth: 1, -->
+                        <!-- borderColor: "#E0E0E0" -->
+                    <!-- } -->
+                <!-- }); -->
+
+                <!-- function update() { -->
+
+                    <!-- plot.setData([getRandomData()]); -->
+
+                    <!-- // Since the axes don't change, we don't need to call plot.setupGrid() -->
+
+                    <!-- plot.draw(); -->
+                    <!-- clearTimeout(update); -->
+                    <!-- setTimeout(update, updateInterval); -->
+                <!-- } -->
+
+               <!-- update(); -->
+        <!-- </script> -->
+
+
+
+            <!-- <p class="indent">Maverix Theme is integrated with the awesome <a href="http://www.flotcharts.org" target="_blank">Flot Charts</a> Library. <a class="btn btn-help" href="https://github.com/flot/flot/blob/master/API.md" target="_blank"><span class="entypo-help"></span></a></p> -->
+
+
+
+
+
+    <!-- </div> -->
+	
+	 <div ng-show="$parent.subNav1 === 2">
+        <h2>Cluster Selection</h2>
+
+        <br/>
+			<div class="form-group">
+					<label>Source:*</label>
+					<select class="select-large">
+						<option>Option A</option>
+						<option>Option B</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Target:*</label>
+					<select class="select-large">
+						<option>Option A</option>
+						<option>Option B</option>
+					</select>
+				</div>
+			
+
+			
+		<!-- added back button  -->
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 3">Next</a>
+    </div>
+	
+	 <div ng-show="$parent.subNav1 === 3">
+        <h2>Select V/Ms</h2>
+			<div class="row content-block">
+    <div class="col-sm-12">
+
+        <div class="table-cell">
+            <table class="table-maverix table-maverix-small">
+                <tr>
+                    <td class="td-icon"><span class="entypo-database"></span></td>
+                    <td>VM 1</td>      
+                </tr>
+                <tr>
+                    <td class="td-icon"><span class="entypo-database"></span></td>
+                    <td>VM 2</td>
+                </tr>
+                <tr  class="selected">
+                    <td class="td-icon"><span class="entypo-database"></span></td>
+                    <td>VM 3</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+	<a  class="fa fa-chevron-circle-down button" style="font-size:36px;"></a>
+	<a  class="fa fa-chevron-circle-up button" style="font-size:36px;"></a>
+</div>
+			
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="table-cell" style="height: 300px">
+            <table class="table table-maverix table-maverix-large">
+                <tr>
+                    <td class="td-icon"><span class="entypo-check"></span></td>
+                    <td><p class="info-main">VM 4</p>
+
+                        <p class="info-sub">Delay: 0</p></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"><span class="entypo-check"></span></td>
+                    <td><p class="info-main">VM 5</p>
+
+                        <p class="info-sub">Delay: 9</p></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"><span class="entypo-check"></span></td>
+                    <td><p class="info-main">VM 6</p>
+
+                        <p class="info-sub">Delay: 6</p></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"><span class="entypo-check"></span></td>
+                    <td><p class="info-main">VM 7</p>
+
+                        <p class="info-sub">Delay: 0</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="placeholder"></div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="placeholder"></div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="placeholder"></div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="placeholder"></div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
 		
 		<!-- added back button  -->
-			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 0">Add</a>
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 4">Next</a>
     </div>
+	
 
-    <div ng-show="$parent.subNav1 === 2">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Memory Usage</h2>
-                <div class="demo-container">
-                    <div id="placeholder" class="demo-placeholder" style="width: 600px; height: 300px;"></div>
-                </div>
+	<div ng-show="$parent.subNav1 === 4">
+        <h2>Application Validations</h2>
+		<br/>
+        <div class="checkbox-big">
+                <label>
+                    <input type="checkbox"> Application Validations
+                </label>
             </div>
+		<p>An APP validation script can be added so that CyberVR can determine if the App is functional or not.Select a VM from which to run a command and how to intercept the result.</p>
+		<br/>
+		
+		<div class="form-group">
+                <label>Validations</label><br>
+                <textarea cols="30" rows="10"></textarea>
+				
+				<div class="form-group-textarea">
+                <label>Script:*</label><br>
+                <textarea cols="30" rows="10"></textarea>
+				</div>
         </div>
-
-        <script>
-
-
-
-
-                // We use an inline data source in the example, usually data would
-                // be fetched from a server
-
-                var data = [],
-                        totalPoints = 300;
-
-                function getRandomData() {
-
-                    if (data.length > 0)
-                        data = data.slice(1);
-
-                    // Do a random walk
-
-                    while (data.length < totalPoints) {
-
-                        var prev = data.length > 0 ? data[data.length - 1] : 50,
-                                y = prev + Math.random() * 10 - 5;
-
-                        if (y < 0) {
-                            y = 0;
-                        } else if (y > 100) {
-                            y = 100;
-                        }
-
-                        data.push(y);
-                    }
-
-                    // Zip the generated y values with the x values
-
-                    var res = [];
-                    for (var i = 0; i < data.length; ++i) {
-                        res.push([i, data[i]])
-                    }
-
-                    return res;
-                }
-
-                // Set up the control widget
-
-                var updateInterval = 24;
-
-                var plot = $.plot("#placeholder", [ getRandomData() ], {
-                    series: {
-                        shadowSize: 0,	// Drawing is faster without shadows
-                        color: "#77B1DE"
-                    },
-                    yaxis: {
-                        min: 0,
-                        max: 100
-                    },
-                    xaxis: {
-                        show: false
-                    },
-                    grid: {
-                        backgroundColor: "#F5F5F5",
-                        borderWidth: 1,
-                        borderColor: "#E0E0E0"
-                    }
-                });
-
-                function update() {
-
-                    plot.setData([getRandomData()]);
-
-                    // Since the axes don't change, we don't need to call plot.setupGrid()
-
-                    plot.draw();
-                    clearTimeout(update);
-                    setTimeout(update, updateInterval);
-                }
-
-               update();
-        </script>
-
-
-
-            <p class="indent">Maverix Theme is integrated with the awesome <a href="http://www.flotcharts.org" target="_blank">Flot Charts</a> Library. <a class="btn btn-help" href="https://github.com/flot/flot/blob/master/API.md" target="_blank"><span class="entypo-help"></span></a></p>
-
-
-
-
-
+		
+		<div class="form-group">
+					<label>VM:</label>
+					<select class="select-large">
+						<option>Option A</option>
+						<option>Option B</option>
+					</select>
+		</div>
+		<div class="form-group">
+						<label for="exampleInputEmail1">Username:*</label>
+						<input type="user" class="form-control" id="user" placeholder="Enter Username">	
+		</div>
+		<div class="form-group">
+						<label for="exampleInputPassword1">Password:*</label>
+						<input type="user" class="form-control" id="password" placeholder="Password">
+		</div>
+		<div>
+			<label for="exampleInputEmail1">Validation Name:*</label>
+			<input type="validation" class="form-control" id="validationName" placeholder="Validation Name">
+		</div>
+		</br>
+		<!-- added back button  -->
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 5">Add Validation</a>
     </div>
+	
+
+	<div ng-show="$parent.subNav1 === 5">
+        <h2>Create App</h2>
+		<br/>
+		<div class="form-group">
+						<label for="exampleInputEmail1">APP Name:</label>
+						<input type="appname" class="form-control" id="appname" placeholder="Type APP Name">	
+		</div>
+		<br/>
+		<div class="form-group">
+                <label>APP Description:</label><br>
+                <textarea cols="30" rows="10"></textarea>
+		</div>
+       
+		<!-- added back button  -->
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 0">Create</a>
+    </div>
+	
 </div>
 

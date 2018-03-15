@@ -1450,8 +1450,9 @@ a.dropdown-toggle{
     color:#616161 !important
 }
 a.dropdown-toggle:hover{
-    color:#616161 !important
+    color:#616161
 }
+
 #top-switch{
     position:fixed;
     top:30px;
@@ -1872,4 +1873,45 @@ ul.entypo-ul li{
     font-family:"Apple Color Emoji";
     font-size:20px !important;
     line-height:28px !important
+}
+
+
+/* added new */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+	border-color:#ddd
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.entypo-trash:before {
+    content: "\e729";
+}
+.entypo-trash:hover {
+    background-color: #4CAF50;
+}
+.container-settings-button{
+	font-size: 30px
+}
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }

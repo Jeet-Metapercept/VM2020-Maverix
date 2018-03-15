@@ -1,8 +1,8 @@
 <div class="sub-nav">
     <ul>
         <li ng-class="{selected : $parent.subNav1 === 0}"><a href="" ng-click="$parent.subNav1 = 0">Overview</a></li>
-        <li ng-class="{selected : $parent.subNav1 === 1}"><a href="" ng-click="$parent.subNav1 = 1">Settings</a></li>
-        <li ng-class="{selected : $parent.subNav1 === 2}"><a href="" ng-click="$parent.subNav1 = 2">Memory</a></li>
+        <!-- <li ng-class="{selected : $parent.subNav1 === 1}"><a href="" ng-click="$parent.subNav1 = 1">Environment</a></li> -->
+        <!-- <li ng-class="{selected : $parent.subNav1 === 2}"><a href="" ng-click="$parent.subNav1 = 2">Memory</a></li> -->
     </ul>
 </div>
 
@@ -10,70 +10,98 @@
     <div ng-show="$parent.subNav1 === 0">
 
         <h2>Add Application</h2>
-
+		<br/>
         <table class="table-content-block">
             <tr>
-                <td class="td-label">Hostname:</td>
-                <td><span class="on-badge"></span></td>
-                <td>maverix.local<br>
-                    <span class="nfo">
-                        Here you'll find Access Information to this Server over the Internet.
-                    </span>
-                </td>
-                <td class="td-actions">
-                    <button>Edit ...</button>
-                </td>
+                <!-- <td class="td-label">Hostname:</td> -->
+                <!-- <td><span class="on-badge"></span></td> -->
+                <!-- <td>maverix.local<br> -->
+                    <!-- <span class="nfo"> -->
+                        <!-- Here you'll find Access Information to this Server over the Internet. -->
+                    <!-- </span> -->
+                <!-- </td> -->
+                <!-- <td class="td-actions"> -->
+                    <!-- <button>Edit ...</button> -->
+                <!-- </td> -->
+				
+				<!-- for add application button -->
+				<div class="toolbar">
+				<div style="float: left"><a class="toolbar-button" href="" ng-click="$parent.subNav1 = 1"><span class="entypo-plus"></span></a>		
             </tr>
-
+			<br/>
             <tr>
-                <td class="td-label">Computername:</td>
-                <td><span class="on-badge"></span></td>
-                <td>maverix<br>
-                    <span class="nfo">
-                        Your Server is reachable under this address in the local network. <a href=""><span
-                            class="entypo-right maverix-circle"></span></a>
-                    </span>
-                </td>
-                <td class="td-actions">
-                    <button>Edit ...</button>
-                </td>
+                <!-- <td class="td-label">Computername:</td> -->
+                <!-- <td><span class="on-badge"></span></td> -->
+                <!-- <td>maverix<br> -->
+                    <!-- <span class="nfo"> -->
+                        <!-- Your Server is reachable under this address in the local network. <a href=""><span -->
+                            <!-- class="entypo-right maverix-circle"></span></a> -->
+                    <!-- </span> -->
+                <!-- </td> -->
+                <!-- <td class="td-actions"> -->
+                    <!-- <button>Edit ...</button> -->
+                <!-- </td> -->
             </tr>
 
         </table>
 
 
-        <h2>Server</h2>
-        <table class="table-content-block">
-            <tr>
-                <td class="td-label">Active for:</td>
-                <td>25 Days, 3 Hours, 49 Minutes</td>
-            </tr>
-            <tr>
-                <td class="td-label">Theme:</td>
-                <td>Maverix Bootstrap (Version 1.0.0)</td>
-            </tr>
+        <!-- <h2>Server</h2> -->
+        <!-- <table class="table-content-block"> -->
+            <!-- <tr> -->
+                <!-- <td class="td-label">Active for:</td> -->
+                <!-- <td>25 Days, 3 Hours, 49 Minutes</td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td class="td-label">Theme:</td> -->
+                <!-- <td>Maverix Bootstrap (Version 1.0.0)</td> -->
+            <!-- </tr> -->
 
-            <tr>
-                <td class="td-label">Author:</td>
-                <td>Bijan Rahnema <a href="mailto:b.rahnema@gmail.com">b.rahnema@gmail.com</a></td>
-            </tr>
+            <!-- <tr> -->
+                <!-- <td class="td-label">Author:</td> -->
+                <!-- <td>Bijan Rahnema <a href="mailto:b.rahnema@gmail.com">b.rahnema@gmail.com</a></td> -->
+            <!-- </tr> -->
 
-        </table>
+        <!-- </table> -->
 
-        <h2>Networks</h2>
-        <table class="table-content-block">
-            <tr>
-                <td class="td-label">Wrapbootstrap:</td>
-                <td>Maverix Theme</td>
-            </tr>
+        <!-- <h2>Networks</h2> -->
+        <!-- <table class="table-content-block"> -->
+            <!-- <tr> -->
+                <!-- <td class="td-label">Wrapbootstrap:</td> -->
+                <!-- <td>Maverix Theme</td> -->
+            <!-- </tr> -->
 
-        </table>
+        <!-- </table> -->
+		
+					<div class="card">
+					<h1 style="text-align:center">APP 1</h1>
+					  <img src="img/vm2020.png" alt="Avatar" style="width:100%">
+					  <div class="container">
+					  <h2>Some description</h2>
+					  <p>
+						<div class="container-settings-button">
+							<div class="dropdown btn-group">
+								<a class="btn dropdown-toggle" href="">
+									<span class="entypo-cog"></span>
+								</a>
+							</div>
+						
+							<div class="dropdown btn-group">
+								<a class="btn dropdown-toggle" href="">
+									<span class="ntypo entypo-trash"></span>
+								</a>
+							</div>
+						 
+						</div> 
+						</p>
+					</div>
+					</div>
 
     </div>
 
 
     <div ng-show="$parent.subNav1 === 1">
-        <h2>Settings</h2>
+        <h2>Environment</h2>
 
         <ul class="list-unstyled indent">
             <li>
@@ -93,7 +121,9 @@
                 <input type="checkbox"> Allow Push Notifications
             </li>
         </ul>
-
+		
+		<!-- added back button  -->
+			<a class="btn btn-capsule" ng-click="$parent.subNav1 = 0">Add</a>
     </div>
 
     <div ng-show="$parent.subNav1 === 2">
